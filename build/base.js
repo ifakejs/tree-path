@@ -22,6 +22,6 @@ config.module
     .loader('ts-loader')
     .end()
 
-config.resolve.extensions.add('ts').add('js').clear()
+config.resolve.extensions.add('.ts').add('.js').end()
 
 module.exports = config
