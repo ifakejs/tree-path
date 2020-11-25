@@ -12,8 +12,7 @@
     "prettier": "prettier --write --config .prettierrc.js \"src/**/*.{js,ts}\"",
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "jest",
-    "test:analy": "jest --coverage",
-    "release": "npm run version"
+    "test:analy": "jest --coverage"
   },
   "author": "biyuqi@163.com",
   "license": "MIT",
