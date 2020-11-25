@@ -14,6 +14,13 @@
     "test": "jest",
     "test:analy": "jest --coverage"
   },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "biyuqi@163.com",
   "license": "MIT",
   "devDependencies": {
