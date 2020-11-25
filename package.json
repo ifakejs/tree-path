@@ -13,7 +13,10 @@
     "prettier": "prettier --write --config .prettierrc.js \"src/**/*.{js,ts}\"",
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "jest",
-    "test:analy": "jest --coverage"
+    "test:analy": "jest --coverage",
+    "postpublish": "git push origin --all; git push origin --tags",
+    "preversion": "yarn run test:analy",
+    "postversion": "npm publish"
   },
   "files": [
     "dist"
