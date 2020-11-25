@@ -1,4 +1,4 @@
-import { Tree, TreePath } from '../src/interface'
+import { Tree, TreePath, JSONObject } from '../src/interface'
 import { treePath } from '../src'
 
 describe('treePath', () => {
@@ -47,7 +47,7 @@ describe('treePath', () => {
   it('should get the correct path', () => {
     const data: TreePath = {
       tree: originData,
-      breakCondition: node => node.id === '3-1-1'
+      breakCondition: (node: JSONObject) => node.id === '3-1-1'
     }
     expect(treePath(data)).toEqual([
       {
@@ -83,7 +83,7 @@ describe('treePath', () => {
   it('should return [] when given []', () => {
     const data: TreePath = {
       tree: [],
-      breakCondition: node => node.id === '3-1'
+      breakCondition: (node: JSONObject) => node.id === '3-1'
     }
     expect(treePath(data)).toEqual([])
   })
@@ -92,7 +92,7 @@ describe('treePath', () => {
     const data: TreePath = {
       // @ts-ignore
       tree: {},
-      breakCondition: node => node.id === '3-1'
+      breakCondition: (node: JSONObject) => node.id === '3-1'
     }
     try {
       treePath(data)
@@ -104,7 +104,7 @@ describe('treePath', () => {
   it('should returns [] when no condition is matched', () => {
     const data: TreePath = {
       tree: originData,
-      breakCondition: node => node.id === '9'
+      breakCondition: (node: JSONObject) => node.id === '9'
     }
     expect(treePath(data)).toEqual([])
   })

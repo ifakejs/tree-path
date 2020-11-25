@@ -25,12 +25,12 @@
   },
   "include": [
     "./src/*",
-    "./__test__/*"
+    "__test__"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "__test__",
+    "build",
     "examples"
   ]
 }

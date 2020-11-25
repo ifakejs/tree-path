@@ -5,7 +5,7 @@ node_js:
 install:
   - yarn install
 
-test:
+script:
   - yarn run test:analy
 
 branches:

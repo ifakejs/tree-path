@@ -59,7 +59,7 @@
     }
   },
   "lint-staged": {
-    "**/*.ts,tsx": [
+    "**/*.ts": [
       "prettier --write --config .prettierrc.js \"src/**/*.{js,ts}\"",
       "yarn run lint"
     ]
