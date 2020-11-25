@@ -10,9 +10,9 @@
 ## Install
 
 ```sh
-npm install ifake/tree-path -S
+npm install @ifake/tree-path -S
 # or
-yarn add ifake/tree-path -S
+yarn add @ifake/tree-path -S
 ```
 
 ## Usage
@@ -25,15 +25,15 @@ window.TreePath(data)
 ```
 - ES6 Module
 ```js
-import { treePath } from 'ifake/tree-path'
+import { treePath } from '@ifake/tree-path'
 // or
-import treePath from 'ifake/tree-path'
+import treePath from '@ifake/tree-path'
 ```
 - CommonJs
 ```js
-const { treePath } = require('ifake/tree-path')
+const { treePath } = require('@ifake/tree-path')
 // or
-const treePath = require('ifake/tree-path')
+const treePath = require('@ifake/tree-path')
 ```
 
 ## API
