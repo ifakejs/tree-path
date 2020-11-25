@@ -6,19 +6,20 @@ interface JSONObject {
 
 export type Tree = JSONObject[]
 
-export interface TreePath {
-  tree: Tree
-  childrenKey?: string
-}
-
 interface BreakCondition {
   (treeNode: JSONObject): boolean
 }
 
+export interface TreePath {
+  tree: Tree
+  childrenKey?: string
+  breakCondition: BreakCondition
+}
+
 const DEFAULT_KEY = 'children'
 
-export function treePath(treeData: TreePath, breakCondition: BreakCondition): Tree {
-  const { tree, childrenKey } = treeData
+export function treePath(treeData: TreePath): Tree {
+  const { tree, childrenKey, breakCondition } = treeData
   const defaultChildrenKey = childrenKey || DEFAULT_KEY
 
   if (!isArr(tree)) {

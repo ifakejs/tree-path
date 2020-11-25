@@ -45,9 +45,10 @@ describe('treePath', () => {
 
   it('should get the correct path', () => {
     const data: TreePath = {
-      tree: originData
+      tree: originData,
+      breakCondition: node => node.id === '3-1-1'
     }
-    expect(treePath(data, node => node.id === '3-1-1')).toEqual([
+    expect(treePath(data)).toEqual([
       {
         id: 3,
         children: [
@@ -80,18 +81,20 @@ describe('treePath', () => {
 
   it('should return [] when given []', () => {
     const data: TreePath = {
-      tree: []
+      tree: [],
+      breakCondition: node => node.id === '3-1'
     }
-    expect(treePath(data, node => node.id === '3-1')).toEqual([])
+    expect(treePath(data)).toEqual([])
   })
 
   it('should return error message when given non of array', () => {
     const data: TreePath = {
       // @ts-ignore
-      tree: {}
+      tree: {},
+      breakCondition: node => node.id === '3-1'
     }
     try {
-      treePath(data, node => node.id === '3-1')
+      treePath(data)
     } catch (e) {
       expect(e).toBe('data must be an array of object.')
     }
@@ -99,8 +102,9 @@ describe('treePath', () => {
 
   it('should returns [] when no condition is matched', () => {
     const data: TreePath = {
-      tree: originData
+      tree: originData,
+      breakCondition: node => node.id === '9'
     }
-    expect(treePath(data, node => node.id === '9')).toEqual([])
+    expect(treePath(data)).toEqual([])
   })
 })
