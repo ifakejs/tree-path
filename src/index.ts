@@ -4,10 +4,10 @@ interface JSONObject {
   [key: string]: any
 }
 
-export type Tree = Array<JSONObject>
+export type Tree = JSONObject[]
 
 export interface TreePath {
-  tree: Array<JSONObject>
+  tree: Tree
   childrenKey?: string
 }
 
@@ -15,11 +15,11 @@ interface BreakCondition {
   (treeNode: JSONObject): boolean
 }
 
-const defaultKey = 'children'
+const DEFAULT_KEY = 'children'
 
 export function treePath(treeData: TreePath, breakCondition: BreakCondition): Tree {
   const { tree, childrenKey } = treeData
-  const defaultChildrenKey = childrenKey || defaultKey
+  const defaultChildrenKey = childrenKey || DEFAULT_KEY
 
   if (!isArr(tree)) {
     throw 'data must be an array of object.'
@@ -41,6 +41,7 @@ export function treePath(treeData: TreePath, breakCondition: BreakCondition): Tr
     }
 
     const childLen = treeNode[defaultChildrenKey]?.length
+
     if (childLen && childLen > 0) {
       for (let j = 0; j < childLen; j++) {
         conditionLoop(treeNode[defaultChildrenKey][j])
