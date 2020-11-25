@@ -1,6 +1,6 @@
 {
   "name": "@ifake/tree-path",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Get tree path by the given condition.",
   "main": "dist/ifake-tree-path.min.js",
   "module": "dist/ifake-tree-path.min.js",
