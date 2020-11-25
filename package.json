@@ -4,7 +4,7 @@
   "description": "Get tree path by the given condition.",
   "main": "dist/ifake-tree-path.min.js",
   "module": "dist/ifake-tree-path.min.js",
-  "types": "dist/ifake-tree-path.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./build/dev.js",
     "serve:example": "serve -l 8899 -n ./examples",
@@ -16,8 +16,7 @@
     "test:analy": "jest --coverage"
   },
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -29,7 +28,6 @@
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
-    "@babel/preset-typescript": "^7.12.1",
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",

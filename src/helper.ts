@@ -1,3 +1,5 @@
-export function isArr(data: Array<any>): boolean {
+import { HelperCheck } from './interface'
+
+export function isArr(data: HelperCheck): boolean {
   return Array.isArray(data)
 }

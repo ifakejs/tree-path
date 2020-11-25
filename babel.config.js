@@ -17,10 +17,10 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        modules: 'commonjs'
+        corejs: '3',
+        useBuiltIns: 'usage'
       }
-    ],
-    '@babel/preset-typescript'
+    ]
   ],
   plugins: originPlugins
 }

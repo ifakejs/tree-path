@@ -1,20 +1,5 @@
+import { TreePath, Tree, JSONObject } from './interface'
 import { isArr } from './helper'
-
-export interface JSONObject {
-  [key: string]: any
-}
-
-export type Tree = JSONObject[]
-
-export interface BreakCondition {
-  (treeNode: JSONObject): boolean
-}
-
-export interface TreePath {
-  tree: Tree
-  childrenKey?: string
-  breakCondition: BreakCondition
-}
 
 const DEFAULT_KEY = 'children'
 
