@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - '12'
+
+install:
+  - yarn install
+
+test:
+  - yarn run test:analy
+
+branches:
+  only:
+    - master
