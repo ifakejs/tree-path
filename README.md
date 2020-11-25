@@ -21,19 +21,15 @@ yarn add @ifake/tree-path -S
 ```js
 // We expose a global variable that can be used directly in the browser.
 
-window.TreePath(data)
+const { treePath } = window.IFakeTP
 ```
 - ES6 Module
 ```js
 import { treePath } from '@ifake/tree-path'
-// or
-import treePath from '@ifake/tree-path'
 ```
 - CommonJs
 ```js
 const { treePath } = require('@ifake/tree-path')
-// or
-const treePath = require('@ifake/tree-path')
 ```
 
 ## API

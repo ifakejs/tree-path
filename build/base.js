@@ -1,9 +1,9 @@
 const Config = require('webpack-chain')
-const { testPath, sourcePath, packageName, resolve } = require('./utils')
+const { testPath, sourcePath, entryName, resolve } = require('./utils')
 
 const config = new Config()
 
-config.entry(packageName).add(resolve('src/index.ts')).end()
+config.entry(entryName).add(resolve('src/index.ts')).end()
 
 config.module
   .rule('compile')

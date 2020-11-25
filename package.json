@@ -2,8 +2,9 @@
   "name": "@ifake/tree-path",
   "version": "0.0.4",
   "description": "Get tree path by the given condition.",
-  "main": "dist/TreePath.min.js",
-  "module": "dist/TreePath.min.js",
+  "main": "dist/ifake-tree-path.min.js",
+  "module": "dist/ifake-tree-path.min.js",
+  "types": "dist/ifake-tree-path.d.ts",
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./build/dev.js",
     "serve:example": "serve -l 8899 -n ./examples",

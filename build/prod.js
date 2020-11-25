@@ -1,14 +1,13 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const config = require('./base')
-const { buildPath, packageName } = require('./utils')
+const { buildPath, exposeGlobalName } = require('./utils')
 
 config.mode('production')
   .output.path(buildPath)
     .filename('[name].min.js')
-    .library(packageName)
+    .library(exposeGlobalName)
     .libraryTarget('umd')
-    .libraryExport('default')
     .end()
 
 config.optimization.minimizer('terser').use(TerserPlugin).end()

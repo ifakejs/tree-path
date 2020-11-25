@@ -1,4 +1,4 @@
-import { Tree, treePath, TreePath } from '../src'
+import { Tree, treePath, TreePath } from '../src/treePath'
 
 describe('treePath', () => {
   let originData: Tree

@@ -16,8 +16,9 @@
     <div class="middle"></div>
     <div class="right"></div>
   </section>
-  <script src="http://localhost:7788/TreePath.js"></script>
+  <script src="http://localhost:7788/ifake-tree-path.js"></script>
   <script>
+    const { treePath } = IFakeTP
     const data = [
       {
         id: 1,
@@ -39,7 +40,7 @@
         id: 2
       }
     ]
-    const t = window.TreePath({ tree: data, childrenKey: 'child', breakCondition: node => node.id === '1-1' })
+    const t = treePath({ tree: data, childrenKey: 'child', breakCondition: node => node.id === '1-1' })
     console.log(t)
   </script>
 </body>
