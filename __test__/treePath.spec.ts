@@ -1,4 +1,5 @@
-import { Tree, treePath, TreePath } from '../src/treePath'
+import { Tree, TreePath } from '../src/interface'
+import { treePath } from '../src'
 
 describe('treePath', () => {
   let originData: Tree
