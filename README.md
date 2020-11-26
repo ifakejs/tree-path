@@ -1,7 +1,9 @@
 # Welcome to @ifake/tree-path 👋
-![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/npm/v/@ifake/tree-path)
+[![codecov](https://codecov.io/gh/ifakejs/tree-path/branch/master/graph/badge.svg?token=a7710442-2e1c-41cb-ad48-3da63c8ca3bf)](https://codecov.io/gh/ifakejs/tree-path)
+![Npm Bundle Size](https://img.shields.io/bundlephobia/min/@ifake/tree-path)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ifakejs/tree-path/blob/master/LICENSE)
-![CI](https://travis-ci.org/ifakejs/tree-path.svg?branch=master)
+![Build Status](https://travis-ci.org/ifakejs/tree-path.svg?branch=master)
 
 > Get tree path by the given condition.
 
