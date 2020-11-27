@@ -5,25 +5,25 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ifakejs/tree-path/blob/master/LICENSE)
 ![Build Status](https://travis-ci.org/ifakejs/tree-path.svg?branch=master)
 
-> Get tree path by the given condition.
+> 根据条件获取该条件下的所有树的节点.
 
-English | [简体中文](https://github.com/ifakejs/tree-path/blob/master/README.zh-CN.md)
+[English]((https://github.com/ifakejs/tree-path/blob/master/README.md)) | 简体中文
 
-### 🏠 [Homepage](https://github.com/ifakejs/tree-path)
+### 🏠 [首页](https://github.com/ifakejs/tree-path)
 
-## Install
+## 安装
 
 ```sh
 npm install @ifake/tree-path -S
-# or
+# 或者
 yarn add @ifake/tree-path -S
 ```
 
-## Usage
+## 使用
 
-- Browser
+- 浏览器
 ```js
-// We expose a global variable that can be used directly in the browser.
+// 在浏览器端, 我们暴露了一个全局变量`IFakeTP`
 
 const { treePath } = window.IFakeTP
 ```
@@ -48,13 +48,13 @@ export interface TreePath {
 ```
 
 - **tree**
-Receive an array of object data.
+接受一个树即数组对象的形式.
 - **childrenKey**
-Custom property values, default is `children`
+自定义树的嵌套的属性值, 默认是 `children`
 - **breakCondition**
-Receives a real-time value from inside the function, defines conditions based on the value and returns a boolean value.
+实时地返回当前遍历的树的节点, 根据该函数返回的条件返回所需要查询的数据结构
 
-## Example
+## 例子
 ```js
 const sourceData = [
  {
@@ -84,7 +84,7 @@ const result = treePath({
     breakCondition: treeNode => treeNode.id === '1-2-1'
 })
 
-// The value should be:
+// 结果:
 [
     {
        id: 1,
@@ -100,30 +100,28 @@ const result = treePath({
 ]
 ```
 
-## Run tests
+## 测试
 
 ```sh
 yarn run test
 ```
 
-## Author
-
-👤 **biyuqiwan@163.com**
+## 作者信息
 
 * Website: http://loadingmore.com
 * Github: [@BiYuqi](https://github.com/BiYuqi)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+欢迎贡献代码, 发现问题!
 
-Feel free to check [issues page](https://github.com/ifakejs/tree-path/issues).
+问题报告地址 [issues page](https://github.com/ifakejs/tree-path/issues).
 
 ## 📝 License
 
 Copyright © 2020 [biyuqiwan@163.com](https://github.com/BiYuqi).
 
-This project is [MIT](https://github.com/ifakejs/tree-path/blob/master/LICENSE) licensed.
+当前项目的许可是[MIT](https://github.com/ifakejs/tree-path/blob/master/LICENSE).
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

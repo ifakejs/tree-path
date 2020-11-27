@@ -5,17 +5,11 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>TreePath</title>
+  <title>@ifake/tree-path example</title>
 </head>
 <body>
-  <h1 style="text-align: center;">Currently in a local test environment.</h1>
-  <section>
-    <div class="left">
-      <code></code>
-    </div>
-    <div class="middle"></div>
-    <div class="right"></div>
-  </section>
+  <h1 style="text-align: center;">Development environment.</h1>
+  <!-- Run in local serve -->
   <script src="http://localhost:7788/ifake-tree-path.js"></script>
   <script>
     const { treePath } = IFakeTP
@@ -40,8 +34,12 @@
         id: 2
       }
     ]
-    const t = treePath({ tree: data, childrenKey: 'child', breakCondition: node => node.id === '1-1' })
-    console.log(t)
+    const result = treePath({
+      tree: data,
+      childrenKey: 'child',
+      breakCondition: node => node.id === '1-1'
+    })
+    console.log(result)
   </script>
 </body>
 </html>
