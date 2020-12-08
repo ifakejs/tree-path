@@ -15,7 +15,6 @@
     "test": "jest",
     "test:analy": "jest --coverage",
     "postpublish": "git push origin --all; git push origin --tags",
-    "preversion": "yarn run test:analy",
     "postversion": "npm publish"
   },
   "files": [
@@ -24,7 +23,9 @@
   "keywords": [
     "tree",
     "search-tree",
-    "breadcrumb"
+    "breadcrumb",
+    "tree-path",
+    "typescript"
   ],
   "publishConfig": {
     "access": "public"
