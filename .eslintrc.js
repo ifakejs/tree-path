@@ -1,12 +1,11 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
-    node: true,
-    jest: true
+    es2021: true,
+    node: true
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 12,
     sourceType: 'module'
   },
   parser: '@typescript-eslint/parser',
@@ -25,9 +24,6 @@ module.exports = {
         ignoreReadBeforeAssign: false
       }
     ],
-    'no-unused-vars': 0,
-    '@typescript-eslint/no-var-requires': 0,
-    '@typescript-eslint/ban-types': 0,
-    '@typescript-eslint/explicit-module-boundary-types': 0
+    '@typescript-eslint/ban-ts-comment': 'off'
   }
 }

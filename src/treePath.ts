@@ -22,7 +22,11 @@ export function treePath(treeData: TreePath): Tree {
   function conditionLoop(treeNode: JSONObject): void {
     result.push(treeNode)
 
-    if (breakCondition && typeof breakCondition === 'function' && breakCondition(treeNode)) {
+    if (
+      breakCondition &&
+      typeof breakCondition === 'function' &&
+      breakCondition(treeNode)
+    ) {
       throw 'Get the target data.'
     }
 

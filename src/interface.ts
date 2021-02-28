@@ -7,6 +7,7 @@ export interface JSONObject {
 export type Tree = JSONObject[]
 
 export interface BreakCondition {
+  // eslint-disable-next-line no-unused-vars
   (treeNode: JSONObject): boolean
 }
 
