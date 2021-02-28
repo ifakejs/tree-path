@@ -1,6 +1,6 @@
 {
   "name": "@ifake/tree-path",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Get tree path by the given condition.",
   "main": "dist/index.umd.js",
   "module": "lib/index.esm.js",
