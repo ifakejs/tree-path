@@ -6,7 +6,7 @@ install:
   - yarn install
 
 script:
-  - yarn run test:analy
+  - yarn run test
   - codecov -f coverage/*.json
 
 branches:
